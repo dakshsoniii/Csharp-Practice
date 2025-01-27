@@ -109,16 +109,127 @@ namespace Giraffe{
             //     Console.WriteLine(luckyNumbers[i]);
 
             // METHODS
+            
+            // SayHi("Mike", 21);
+            // SayHi("nohan", 54);
+            // SayHi("daksh", 25);
 
-            
-            
-            SayHi("Mike", 21);
-            }
-            static void SayHi(string name, int age){
-                Console.WriteLine("Hello "+name+" your age is "+age);
-                
-            }
-            
+            // Console.WriteLine(Cube(5));
 
+            // IF-ELSE STATEMENT
+
+            // bool isMale = false;
+            // bool isTall = false;
+
+            // if(isMale && isTall){
+            //     Console.WriteLine("person is tall male");
+            // }
+            // else if (isMale && !isTall){
+            //     Console.WriteLine("person is short male");
+            // }
+            // else if (!isMale && isTall){
+            //     Console.WriteLine("person is tall but not male");
+            // }
+            // else{
+            //     Console.WriteLine("person is female");
+            // }
+
+            // }
+            // static void SayHi(string name, int age){
+            //     Console.WriteLine("Hello "+name+" your age is "+age);
+            // }
+
+            // static int Cube(int num){
+            //     int result = num*num*num;
+            //     return result;
+            // }
+
+            // Console.WriteLine(GetMax(10,20,15));
+
+            // CALUCULATOR
+
+            // Console.Write("Enter a number: ");
+            // double num1 = Convert.ToDouble(Console.ReadLine());
+
+            // Console.Write("Enter Operator: ");
+            // string op = Console.ReadLine();
+
+            // Console.Write("Enter a number: ");
+            // double num2 = Convert.ToDouble(Console.ReadLine()); 
+
+            // if (op == "+"){
+            //     Console.WriteLine(num1+num2);
+            // }
+            // else if(op == "-"){
+            //     Console.WriteLine(num1-num2);
+            // }
+            // else if(op == "*"){
+            //     Console.WriteLine(num1*num2);
+            // }
+            // else if(op == "/"){
+            //     Console.WriteLine(num1/num2);
+            // }
+            // else{
+            //     Console.WriteLine("Invalid Operator");
+            // }
+            
+            // SWITCH STATEMENT
+
+            Console.WriteLine(GetDay(0));
+            Console.ReadLine();
+
+
+
+
+
+            }
+
+            // SWITCH STATEMENT
+            static string GetDay(int dayNum){
+            string dayName;
+            switch(dayNum){
+                case 0:
+                    dayName = "Sunday";
+                    break;
+                case 1:
+                    dayName = "Monday";
+                    break;
+                case 2:
+                    dayName = "Tuesday";
+                    break;
+                case 3:
+                    dayName = "Wednesday";
+                    break;
+                case 4:
+                    dayName = "Thursday";
+                    break;
+                case 5:
+                    dayName = "Friday";
+                    break;
+                case 6:
+                    dayName = "Saturday";
+                    break;
+                default:
+                    dayName = "Invalid day number";
+                    break;
+            }
+            return dayName;
+
+
+            // static int GetMax(int num1, int num2, int num3){
+            //     int result;
+            //     if(num1>num2 && num1>num3){
+            //         result= num1;
+            //     }
+            //     else if(num2>num1 && num2>num3){
+            //         result = num2;
+            //     }
+            //     else{
+            //         result = num3;
+            //     }
+            //     return result;
+            // }
+            
         }
-    }
+}
+}
