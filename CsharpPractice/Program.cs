@@ -175,45 +175,96 @@ namespace Giraffe{
             
             // SWITCH STATEMENT
 
-            Console.WriteLine(GetDay(0));
-            Console.ReadLine();
+            // Console.WriteLine(GetDay(0));
+            // Console.ReadLine();
 
+            // WHILE LOOP
 
+            // int index = 1;
+            // while (index <= 5){
+            //     Console.WriteLine(index);
+            //     index++;
+            // }
 
+            // //  DO WHILE LOOP
+            // int index=3;
+            // do{
+            //     Console.WriteLine(index);
+            //     index++;
+            // }
+            // while(index<=5);
+            // --------------------------------------------------------------------------------
+            // BUILD A GUESSING GAME
 
+            // string secretWord="giraffe";
+            // string guess="";
+            // int guessCount=0;
+            // int guessLimit=3;
+            // bool outOfGuesses=false;
 
+            // while(guess != secretWord && !outOfGuesses){
+
+            //     if(guessCount<guessLimit){
+            //         Console.WriteLine("Enter guess: ");
+            //         guess = Console.ReadLine();
+            //         guessCount++;
+            //     }
+            //     else{
+            //         outOfGuesses=true;
+            //         break;
+            //     }
+            // }
+            //     if(outOfGuesses){
+            //         Console.WriteLine("You Lose");
+            //     }
+            //     else{
+            //         Console.WriteLine("You Win");
+            //     }
+            // }
+            
+            // FOR LOOP
+
+            // for(int i=0;i<5;i++){
+            //     Console.WriteLine(i);
+            // }
+
+            int[] luckyNumbers = {4,8,15,16,23,42};
+            for(int i=0;i<luckyNumbers.Length;i++){
+                Console.WriteLine(luckyNumbers[i]);
             }
+
+            
 
             // SWITCH STATEMENT
-            static string GetDay(int dayNum){
-            string dayName;
-            switch(dayNum){
-                case 0:
-                    dayName = "Sunday";
-                    break;
-                case 1:
-                    dayName = "Monday";
-                    break;
-                case 2:
-                    dayName = "Tuesday";
-                    break;
-                case 3:
-                    dayName = "Wednesday";
-                    break;
-                case 4:
-                    dayName = "Thursday";
-                    break;
-                case 5:
-                    dayName = "Friday";
-                    break;
-                case 6:
-                    dayName = "Saturday";
-                    break;
-                default:
-                    dayName = "Invalid day number";
-                    break;
-            }
-            return dayName;
+            // static string GetDay(int dayNum){
+            // string dayName;
+            // switch(dayNum){
+            //     case 0:
+            //         dayName = "Sunday";
+            //         break;
+            //     case 1:
+            //         dayName = "Monday";
+            //         break;
+            //     case 2:
+            //         dayName = "Tuesday";
+            //         break;
+            //     case 3:
+            //         dayName = "Wednesday";
+            //         break;
+            //     case 4:
+            //         dayName = "Thursday";
+            //         break;
+            //     case 5:
+            //         dayName = "Friday";
+            //         break;
+            //     case 6:
+            //         dayName = "Saturday";
+            //         break;
+            //     default:
+            //         dayName = "Invalid day number";
+            //         break;
+            // }
+            // return dayName;
 
 
             // static int GetMax(int num1, int num2, int num3){
@@ -229,7 +280,8 @@ namespace Giraffe{
             //     }
             //     return result;
             // }
+
             
         }
 }
-}
+
