@@ -12,9 +12,12 @@ using System.Threading.Tasks;
 // dotnet restore is used to restore the project
 // dotnet build is used to build the project
 
-namespace Giraffe{
-    class Program{
-        static void Main(string[] args){
+namespace Giraffe
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
             //  Console.WriteLine("Hello Daksh");
             // Console.WriteLine("   /|");
             // Console.WriteLine("  / |");
@@ -27,7 +30,7 @@ namespace Giraffe{
             // Console.WriteLine("he was "+ characterAge+ " years old");
             // Console.WriteLine("he really liked the name "+characterName);
             // Console.WriteLine("but didnt like being "+characterAge);
-            
+
             // string phrase = "giraffe academy";
             // char grade = 'A';
             // int age = 30;
@@ -79,7 +82,7 @@ namespace Giraffe{
 
             // int num = Convert.ToInt32("45");
             // Console.WriteLine(num+6);
-            
+
             // string color, noun, celebrity;
             // Console.WriteLine("Enter a color:");
             // color = Console.ReadLine();
@@ -104,12 +107,12 @@ namespace Giraffe{
             // Console.WriteLine(friends[1]);
             // Console.WriteLine(luckyNumbers[0]);
             // Console.ReadLine();
-            // // print whole arr
+            // To print whole arr
             // for(int i=0;i<luckyNumbers.Length;i++){
             //     Console.WriteLine(luckyNumbers[i]);
 
             // METHODS
-            
+
             // SayHi("Mike", 21);
             // SayHi("nohan", 54);
             // SayHi("daksh", 25);
@@ -172,7 +175,7 @@ namespace Giraffe{
             // else{
             //     Console.WriteLine("Invalid Operator");
             // }
-            
+
             // SWITCH STATEMENT
 
             // Console.WriteLine(GetDay(0));
@@ -221,19 +224,70 @@ namespace Giraffe{
             //         Console.WriteLine("You Win");
             //     }
             // }
-            
+
             // FOR LOOP
 
             // for(int i=0;i<5;i++){
             //     Console.WriteLine(i);
             // }
 
-            int[] luckyNumbers = {4,8,15,16,23,42};
-            for(int i=0;i<luckyNumbers.Length;i++){
-                Console.WriteLine(luckyNumbers[i]);
-            }
+            // int[] luckyNumbers = {4,8,15,16,23,42};
+            // for(int i=0;i<luckyNumbers.Length;i++){
+            //     Console.WriteLine(luckyNumbers[i]);
+            // }
 
-            
+            //    Console.WriteLine(GetPow(3,2));
+
+            // 2D ARRAYS
+
+            // int [,] numberGrid ={
+            //     {1,2},
+            //     {3,4},
+            //     {5,6}
+            // };
+            // Console.WriteLine(numberGrid[0,1]);
+            // Console.WriteLine(numberGrid[1,1]);
+            // Console.WriteLine(numberGrid[2,0]);
+            // Console.WriteLine(numberGrid[2,1]);
+
+            // EXCEPTION HANDLING
+
+            // try
+            // {
+            //     Console.Write("Enter a number");
+            //     int num1 = Convert.ToInt32(Console.ReadLine());
+            //     Console.Write("Enter a number");
+            //     int num2 = Convert.ToInt32(Console.ReadLine());
+
+            //     Console.WriteLine(num1 / num2);
+
+            //     Console.ReadLine();
+            // }
+            // catch (DivideByZeroException e)
+            // {
+            //     Console.WriteLine(e.Message);
+            // }
+            // catch (FormatException e)
+            // {
+            //     Console.WriteLine(e.Message);
+            // }
+            // finally
+            // {
+            //     Console.WriteLine("This is the finally block");
+            // }
+
+
+            // BUILD A EXPONENT METHOD
+
+            // static int GetPow(int baseNum, int powNum){
+            //     int result =1;
+            //     for(int i=1;i<=powNum;i++){
+            //         result=result*baseNum;
+            //     }
+            //     return result;
+            // }
+
+
 
             // SWITCH STATEMENT
             // static string GetDay(int dayNum){
@@ -280,8 +334,7 @@ namespace Giraffe{
             //     }
             //     return result;
             // }
-
-            
         }
-}
+    }
 
+}
