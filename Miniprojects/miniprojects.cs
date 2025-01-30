@@ -170,119 +170,217 @@
 // GRADE CALCULATOR---------------------------------------------------------------------------------------------------
 
 // initialize variables - graded assignments 
-int examAssignments = 5;
+// int examAssignments = 5;
 
-string[] studentNames = new string[] { "Sophia", "Andrew", "Emma", "Logan" };
+// string[] studentNames = new string[] { "Sophia", "Andrew", "Emma", "Logan" };
 
-int[] sophiaScores = new int[] { 90, 86, 87, 98, 100 };
-int[] andrewScores = new int[] { 92, 89, 81, 96, 90 };
-int[] emmaScores = new int[] { 90, 85, 87, 98, 68 };
-int[] loganScores = new int[] { 90, 95, 87, 88, 96 };
+// int[] sophiaScores = new int[] { 90, 86, 87, 98, 100 };
+// int[] andrewScores = new int[] { 92, 89, 81, 96, 90 };
+// int[] emmaScores = new int[] { 90, 85, 87, 98, 68 };
+// int[] loganScores = new int[] { 90, 95, 87, 88, 96 };
 
-int[] studentScores = new int[10];
+// int[] studentScores = new int[10];
 
-string currentStudentLetterGrade = "";
+// string currentStudentLetterGrade = "";
 
-Console.WriteLine("Student\t\tExam Score\tOverall Grade\tExtra Credit\n");
+// Console.WriteLine("Student\t\tExam Score\tOverall Grade\tExtra Credit\n");
 
-foreach (string name in studentNames)
-{
+// foreach (string name in studentNames)
+// {
 
-    string currentStudent = name;
+//     string currentStudent = name;
 
-    if (currentStudent == "Sophia")
-    {
-        studentScores = sophiaScores;
-    }
-    else if (currentStudent == "Andrew")
-    {
-        studentScores = andrewScores;
-    }
-    else if (currentStudent == "Emma")
-    {
-        studentScores = emmaScores;
-    }
-    else if (currentStudent == "Logan")
-    {
-        studentScores = loganScores;
-    }
-
-
-    // int sumAssignmentScores = 0;
+//     if (currentStudent == "Sophia")
+//     {
+//         studentScores = sophiaScores;
+//     }
+//     else if (currentStudent == "Andrew")
+//     {
+//         studentScores = andrewScores;
+//     }
+//     else if (currentStudent == "Emma")
+//     {
+//         studentScores = emmaScores;
+//     }
+//     else if (currentStudent == "Logan")
+//     {
+//         studentScores = loganScores;
+//     }
 
 
+//     // int sumAssignmentScores = 0;
 
-    int gradedAssignments = 0;
-    int gradedExtraCreditAssignments = 0;
 
-    int sumExamScores = 0;
-    int sumExtraCreditScores = 0;
 
-    decimal currentStudentGrade = 0;
-    decimal currentStudentExamScore = 0;
-    decimal currentStudentExtraCreditScore = 0;
+//     int gradedAssignments = 0;
+//     int gradedExtraCreditAssignments = 0;
 
-    foreach (int score in studentScores)
-    {
-        gradedAssignments += 1;
+//     int sumExamScores = 0;
+//     int sumExtraCreditScores = 0;
 
-        if (gradedAssignments <= examAssignments)
-        {
-            sumExamScores = sumExamScores + score;
-        }
+//     decimal currentStudentGrade = 0;
+//     decimal currentStudentExamScore = 0;
+//     decimal currentStudentExtraCreditScore = 0;
 
-        else
-        {
-            gradedExtraCreditAssignments += 1;
-            sumExtraCreditScores += score;
-        }
-    }
-    currentStudentExamScore = (decimal)sumExamScores / examAssignments;
-    decimal extraCreditBonus = (decimal)sumExtraCreditScores * 0.10M;
-    decimal extraCreditPoints = extraCreditBonus / examAssignments;
-    currentStudentGrade = (sumExamScores + extraCreditBonus) / examAssignments;
-    currentStudentExtraCreditScore = sumExtraCreditScores;
-    if (currentStudentGrade >= 97)
-        currentStudentLetterGrade = "A+";
+//     foreach (int score in studentScores)
+//     {
+//         gradedAssignments += 1;
 
-    else if (currentStudentGrade >= 93)
-        currentStudentLetterGrade = "A";
+//         if (gradedAssignments <= examAssignments)
+//         {
+//             sumExamScores = sumExamScores + score;
+//         }
 
-    else if (currentStudentGrade >= 90)
-        currentStudentLetterGrade = "A-";
+//         else
+//         {
+//             gradedExtraCreditAssignments += 1;
+//             sumExtraCreditScores += score;
+//         }
+//     }
+//     currentStudentExamScore = (decimal)sumExamScores / examAssignments;
+//     decimal extraCreditBonus = (decimal)sumExtraCreditScores * 0.10M;
+//     decimal extraCreditPoints = extraCreditBonus / examAssignments;
+//     currentStudentGrade = (sumExamScores + extraCreditBonus) / examAssignments;
+//     currentStudentExtraCreditScore = sumExtraCreditScores;
+//     if (currentStudentGrade >= 97)
+//         currentStudentLetterGrade = "A+";
 
-    else if (currentStudentGrade >= 87)
-        currentStudentLetterGrade = "B+";
+//     else if (currentStudentGrade >= 93)
+//         currentStudentLetterGrade = "A";
 
-    else if (currentStudentGrade >= 83)
-        currentStudentLetterGrade = "B";
+//     else if (currentStudentGrade >= 90)
+//         currentStudentLetterGrade = "A-";
 
-    else if (currentStudentGrade >= 80)
-        currentStudentLetterGrade = "B-";
+//     else if (currentStudentGrade >= 87)
+//         currentStudentLetterGrade = "B+";
 
-    else if (currentStudentGrade >= 77)
-        currentStudentLetterGrade = "C+";
+//     else if (currentStudentGrade >= 83)
+//         currentStudentLetterGrade = "B";
 
-    else if (currentStudentGrade >= 73)
-        currentStudentLetterGrade = "C";
+//     else if (currentStudentGrade >= 80)
+//         currentStudentLetterGrade = "B-";
 
-    else if (currentStudentGrade >= 70)
-        currentStudentLetterGrade = "C-";
+//     else if (currentStudentGrade >= 77)
+//         currentStudentLetterGrade = "C+";
 
-    else if (currentStudentGrade >= 67)
-        currentStudentLetterGrade = "D+";
+//     else if (currentStudentGrade >= 73)
+//         currentStudentLetterGrade = "C";
 
-    else if (currentStudentGrade >= 63)
-        currentStudentLetterGrade = "D";
+//     else if (currentStudentGrade >= 70)
+//         currentStudentLetterGrade = "C-";
 
-    else if (currentStudentGrade >= 60)
-        currentStudentLetterGrade = "D-";
+//     else if (currentStudentGrade >= 67)
+//         currentStudentLetterGrade = "D+";
 
-    else
-        currentStudentLetterGrade = "F";
+//     else if (currentStudentGrade >= 63)
+//         currentStudentLetterGrade = "D";
 
-    Console.WriteLine($"{currentStudent}\t\t{currentStudentExamScore}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}\t{currentStudentExtraCreditScore} ({(((decimal)sumExtraCreditScores / 10) / examAssignments)} pts)");
+//     else if (currentStudentGrade >= 60)
+//         currentStudentLetterGrade = "D-";
+
+//     else
+//         currentStudentLetterGrade = "F";
+
+//     Console.WriteLine($"{currentStudent}\t\t{currentStudentExamScore}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}\t{currentStudentExtraCreditScore} ({(((decimal)sumExtraCreditScores / 10) / examAssignments)} pts)");
+// }
+// Console.WriteLine("\n\rPress the Enter key to continue");
+// Console.ReadLine();
+
+//  COIN TOSS GAME---------------------------------------------------------------------------------------------------
+
+// Random coin = new Random();
+// int toss = coin.Next(0,2);
+
+// Console.WriteLine((toss==0) ? "Heads": "tails");
+
+// string permission = "Admin|Manager"
+// int level=52;
+
+// if(permission.Contains("admin")){
+//     if(level >55){
+//         Console.WriteLine("You have full access.");
+//     }
+//     else{
+//         Console.WriteLine("You have limited access.");
+//     }
+// }
+// else if(permission.Contains("Manager")){
+//     if(level>20){
+//         Console.WriteLine("You have full access.");
+//     }
+//     else{
+//         Console.WriteLine("You have limited access.");
+//     }
+// }
+// else{
+//     Console.WriteLine("You have no access.");
+// }
+
+// bool flag=true;
+// int value =50;
+// if(flag){
+//     // int value =10;
+//     Console.WriteLine($"the number is {value}");   
+// }
+// value=10;
+// Console.WriteLine($"outside the block the number is {value}");
+
+// Code sample 2
+// int value;
+
+// if (true)
+// {
+//     value = 10;
+//     Console.WriteLine($"Inside the code block: {value}");
+// }
+
+// Console.WriteLine($"Outside the code block: {value}");
+
+// int[] numbers = {4, 8, 15, 16, 23, 42};
+// int total =0;
+// bool found =false;
+
+// foreach(int number in numbers)
+// {    total += number;
+
+//     if(number==42){
+//         bool found = true;
+//     }
+// }
+
+// if(found){
+//     Console.WriteLine("set contains 42");
+// }
+// Console.WriteLine($"total: {total}");
+
+// switch(fruit){
+//     case "apple":
+//     Console.WriteLine("apple");
+//     break;
+//     case "banana":
+//     Console.WriteLine("banana");
+//     break;
+//     case "cherry":
+//     Console.WriteLine("cherry");
+//     break;
+// }
+
+int employeeLevel = 200;
+string employeeName="jignesh";
+string title="";
+
+switch(employeeLevel){
+    case 100:
+    title="Manager";
+    break;
+    case 200:
+    title="Director";
+    break;
+    case 300:
+    title="CEO";
+    break;
+    default:
+    title="Employee";
+    break;
 }
-Console.WriteLine("\n\rPress the Enter key to continue");
-Console.ReadLine();
-
+Console.WriteLine($"{employeeName} is a {title}");
