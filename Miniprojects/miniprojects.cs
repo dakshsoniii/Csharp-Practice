@@ -170,18 +170,22 @@
 // GRADE CALCULATOR---------------------------------------------------------------------------------------------------
 
 // initialize variables - graded assignments 
-int currentAssignments = 5;
+int examAssignments = 5;
+
+string[] studentNames = new string[] { "Sophia", "Andrew", "Emma", "Logan" };
 
 int[] sophiaScores = new int[] { 90, 86, 87, 98, 100 };
 int[] andrewScores = new int[] { 92, 89, 81, 96, 90 };
 int[] emmaScores = new int[] { 90, 85, 87, 98, 68 };
 int[] loganScores = new int[] { 90, 95, 87, 88, 96 };
 
-string[] students = new string[] { "Sophia", "Andrew", "Emma", "Logan" };
 int[] studentScores = new int[10];
+
+string currentStudentLetterGrade = "";
+
 Console.WriteLine("Student\t\tExam Score\tOverall Grade\tExtra Credit\n");
 
-foreach (string name in students)
+foreach (string name in studentNames)
 {
 
     string currentStudent = name;
@@ -204,16 +208,19 @@ foreach (string name in students)
     }
 
 
-    int sumAssignmentScores = 0;
-    decimal currentStudentGrade = 0;
-    decimal currentStudentExamScore = 0;
-    decimal currentStudentExtraCreditScore = 0;
+    // int sumAssignmentScores = 0;
+
+
+
+    int gradedAssignments = 0;
+    int gradedExtraCreditAssignments = 0;
 
     int sumExamScores = 0;
     int sumExtraCreditScores = 0;
 
-    int gradedAssignments = 0;
-    int gradedExtraCreditAssignments = 0;
+    decimal currentStudentGrade = 0;
+    decimal currentStudentExamScore = 0;
+    decimal currentStudentExtraCreditScore = 0;
 
     foreach (int score in studentScores)
     {
@@ -230,12 +237,11 @@ foreach (string name in students)
             sumExtraCreditScores += score;
         }
     }
-    currentStudentExamScore = (decimal)(sumExamScores) / examAssignments;
-    currentStudentExtraCreditScore = (decimal)(sumExtraCreditScores) / gradedExtraCreditAssignments;
-    
-     currentStudentGrade = (decimal)((decimal)sumExamScores + ((decimal)sumExtraCreditScores / 10)) / examAssignments;
-
-    string currentStudentLetterGrade;
+    currentStudentExamScore = (decimal)sumExamScores / examAssignments;
+    decimal extraCreditBonus = (decimal)sumExtraCreditScores * 0.10M;
+    decimal extraCreditPoints = extraCreditBonus / examAssignments;
+    currentStudentGrade = (sumExamScores + extraCreditBonus) / examAssignments;
+    currentStudentExtraCreditScore = sumExtraCreditScores;
     if (currentStudentGrade >= 97)
         currentStudentLetterGrade = "A+";
 
@@ -277,4 +283,6 @@ foreach (string name in students)
 
     Console.WriteLine($"{currentStudent}\t\t{currentStudentExamScore}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}\t{currentStudentExtraCreditScore} ({(((decimal)sumExtraCreditScores / 10) / examAssignments)} pts)");
 }
+Console.WriteLine("\n\rPress the Enter key to continue");
+Console.ReadLine();
 
